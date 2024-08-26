@@ -1,0 +1,160 @@
+
+.nav-top {
+    height: 10vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    flex-wrap: wrap; 
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left {
+    flex: 1;
+    min-width: 200px; 
+    
+}
+
+.nav-center {
+    flex: 2;
+    justify-content: center;
+}
+.input-container {
+    position: relative;
+    display: inline-block;
+    min-width: 444px; 
+
+  }
+  .input {
+    padding-left: 40px; 
+    border: none;
+    border-radius: 4px; 
+    outline: none; 
+    transition: border-color 0.0s ease; 
+  }
+  .input:focus {
+  border: 2px solid #becccc; 
+}
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+    cursor: pointer;
+  }
+  .search-button {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 16px;
+    pointer-events: auto;
+  }
+  
+  .search-button:hover {
+    color: #000; 
+  }
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+    min-width: 100px; 
+   
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid white;
+  }
+  
+  .loginButton {
+    padding: 5px 10px;
+    background-color: inherit;
+    color: rgb(26, 25, 25);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .loginButton:hover {
+    background-color: #00e5e5;
+  }
+
+.homeButton, .dropdown {
+    margin-right: 10px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.homeButton:hover {
+    background-color: #00e5e5;
+    color: rgb(12, 12, 12);
+}
+
+.input {
+    width: 100%;
+    max-width: 500px; 
+    border-radius: 25px;
+    padding: 10px;
+}
+
+
+@media (max-width: 1024px) {
+    .nav-center .input {
+        max-width: 400px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-left, .nav-right {
+        flex: 1 1 100%; 
+        justify-content: center;
+    }
+
+    .nav-center {
+        flex: 1 1 100%; 
+    }
+
+    .nav-center .input {
+        max-width: 300px; 
+    }
+    .search-button {
+        display: none; 
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-top {
+        flex-direction: column; 
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .nav-left, .nav-center, .nav-right {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-center .input {
+        max-width: 250px; 
+    }
+}
